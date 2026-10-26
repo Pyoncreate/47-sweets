@@ -1,0 +1,511 @@
+/* =========================
+    Base
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f6f2;
+    color: #333333;
+    font-family: -apple-system, BlinkMAcSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.8;
+    ;
+}
+
+
+/* ========================= 
+    Header 
+========================= */
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666666
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ========================= 
+    Main
+ ========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 40px;
+}
+
+section h2 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section-label {
+    margin: 0;
+    color: #8b7355;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* ========================= 
+    Feature 
+========================= */
+
+.feature {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.feature h2 {
+    font-size: 34px;
+    line-height: 1.5;
+}
+
+.feature-image {
+    height: 420px;
+    margin: 40px auto;
+    background-color: #ddd2c4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    letter-spacing: 40px;
+    font-size: 14px;
+}
+
+.feature p {
+    max-width: 600px;
+    margin: 0 auto 25px
+}
+
+.feature a {
+    color: #6f5a43;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* ========================= 
+    Cards 
+========================= */
+
+.sweet-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+}
+
+.sweet-card {
+    background-color: #ffffff;
+    padding: 18px;
+}
+
+.sweet-image {
+    height: 220px;
+    background-color: #d8c7b0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.sweet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prefecture {
+    margin: 0;
+    color: #9a8063;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.sweet-card h3 {
+    margin: 5px 0;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.sweet-card h4 {
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.sweet-card p {
+    font-size: 13px;
+}
+
+/* ========================= 
+    Search 
+========================= */
+
+#search {
+    text-align: center;
+    background-color: #f3efe9;
+}
+
+#search h2 {
+    font-size: 32px;
+}
+
+#search>p:not(.section-label) {
+    color: #666666;
+}
+
+.search-box {
+    display: flex;
+    max-width: 700px;
+    margin: 35px auto 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd6cc;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 20px 24px;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #999999
+}
+
+.search-box button {
+    padding: 0 35px;
+    border: none;
+    background-color: #5f5144;
+    color: #ffffff;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+/* ========================= 
+    Search Options 
+========================= */
+
+.search-options {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    gap: 15px;
+}
+
+.search-option {
+    display: block;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #eb36df;
+    color: #333333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.search-option:hover {
+    transform: translateY(-3px);
+}
+
+.search-option h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.search-option p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* ========================= 
+    Footer 
+========================= */
+
+footer {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e9e3da;
+}
+
+footer p {
+    margin: 3px;
+    font-size: 12px;
+}
+
+/* ========================= 
+    Mobile 
+========================= */
+
+@media(max-width:700px) {
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .sweet-cards,
+    .search-options {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 280px;
+    }
+
+    .feature h2 {
+        font-size: 27px;
+    }
+
+    .search-box {
+        display: block;
+    }
+
+    .search-box input {
+        width: 100%;
+        height: 50px;
+        margin-top: 8px;
+    }
+
+}
+
+/* 検索エリア */
+
+.search-section {
+    margin-top: 80px;
+}
+
+.search-panel {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 40px;
+    background-color: #f8f7f4;
+    border-radius: 12px;
+}
+
+.search-panel-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.filter-group {
+    margin-bottom: 35px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-option {
+    padding: 12px 22px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-option:hover {
+    background-color: #f0f0f0;
+}
+
+.search-button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 30px;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-option.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* 商品詳細ページ */
+
+.product-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.breadcrumb {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-prefecture {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    line-height: 1.9;
+}
+
+
+.product-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.product-tags span {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+/* 購入ボタン */
+
+.purchase-section {
+    margin-top: 70px;
+    padding: 40px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.purchase-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.purchase-button {
+    display: block;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+.purchase-button:hover {
+    opacity: 0.8;
+}
+
+
+/* おすすめ */
+
+.recommend-section {
+    margin-top: 60px;
+}
+
+.recommend-section li {
+    margin-bottom: 10px;
+}
+
+
+/* 戻る */
+
+.back-button {
+    margin-top: 60px;
+}
+
+.back-button a {
+    text-decoration: none;
+}
+
+
+/* スマホ */
+
+@media (max-width: 700px) {
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-info h2 {
+        font-size: 26px;
+    }
+
+    .purchase-buttons {
+        flex-direction: column;
+    }
+
+}
